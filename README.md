@@ -19,3 +19,4 @@ O projeto conta com uma Tela de Carregamento, Carrossel de Imagens Dinâmico, Fl
 ![](https://i.ibb.co/ryLSdKz/Captura-de-tela-2022-05-31-00-06-03.png)
 
 ![](https://i.ibb.co/D8K7GY8/Captura-de-tela-2022-05-31-00-06-37.png)
+"# clone_instagram" 
